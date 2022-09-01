@@ -1,0 +1,158 @@
+@font-face {
+	font-family: 'iconfont'; /* Project id 3548180 */
+	src: url('iconfont.woff2?t=1658826581372') format('woff2'),
+		url('iconfont.woff?t=1658826581372') format('woff'),
+		url('iconfont.ttf?t=1658826581372') format('truetype');
+}
+
+/* 匹配类名中有vt-icon的元素 */
+[class*='vt-icon'] {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.vt-icon-down:before {
+	content: '\e664';
+}
+
+.vt-icon-delete:before {
+	content: '\e67e';
+}
+
+.vt-icon-brightness:before {
+	content: '\e614';
+}
+
+.vt-icon-ico-agreement:before {
+	content: '\e660';
+}
+
+.vt-icon-child:before {
+	content: '\e657';
+}
+
+.vt-icon-loop:before {
+	content: '\e690';
+}
+
+.vt-icon-arrowdown:before {
+	content: '\e7ee';
+}
+
+.vt-icon-audio:before {
+	content: '\e897';
+}
+
+.vt-icon-audio-fill:before {
+	content: '\e898';
+}
+
+.vt-icon-course:before {
+	content: '\e623';
+}
+
+.vt-icon-delete1:before {
+	content: '\e6f2';
+}
+
+.vt-icon-play:before {
+	content: '\e717';
+}
+
+.vt-icon-bluetooth_link:before {
+	content: '\e699';
+}
+
+.vt-icon-addto:before {
+	content: '\e69a';
+}
+
+.vt-icon-DND_mode:before {
+	content: '\e69b';
+}
+
+.vt-icon-settings:before {
+	content: '\e69c';
+}
+
+.vt-icon-bluray:before {
+	content: '\e69d';
+}
+
+.vt-icon-cancel:before {
+	content: '\e69e';
+}
+
+.vt-icon-brightness1:before {
+	content: '\e69f';
+}
+
+.vt-icon-home:before {
+	content: '\e6a0';
+}
+
+.vt-icon-favoriteslist:before {
+	content: '\e6a1';
+}
+
+.vt-icon-nextsong:before {
+	content: '\e6a2';
+}
+
+.vt-icon-guarantee:before {
+	content: '\e6a3';
+}
+
+.vt-icon-prevent:before {
+	content: '\e6a4';
+}
+
+.vt-icon-privacy:before {
+	content: '\e6a5';
+}
+
+.vt-icon-brightness2:before {
+	content: '\e6a6';
+}
+
+.vt-icon-cancel1:before {
+	content: '\e624';
+}
+
+.vt-icon-editor:before {
+	content: '\e6f6';
+}
+
+.vt-icon-ic_account_child_px:before {
+	content: '\e629';
+}
+
+.vt-icon-bottom:before {
+	content: '\e666';
+}
+
+.vt-icon-music-list:before {
+	content: '\e6a7';
+}
+
+.vt-icon-addto1:before {
+	content: '\e609';
+}
+
+.vt-icon-icon_nextsong:before {
+	content: '\e607';
+}
+
+.vt-icon-camera:before {
+	content: '\e665';
+}
+
+.vt-icon-bluetoothoff:before {
+	content: '\e697';
+}
+
+.vt-icon-bluetoothon:before {
+	content: '\e698';
+}

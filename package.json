@@ -1,11 +1,16 @@
 {
-  "name": "one-elementui",
+  "name": "one-ui-element",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "dist/one-elementui.umd.min.js",
+  "author": {
+    "name": "sudi"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib":"vue-cli-service build --target lib packages/index.js"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -39,7 +44,11 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "no-tabs": "off",
+      "indent": "off",
+      "space-before-function-paren": "off"
+    }
   },
   "browserslist": [
     "> 1%",
