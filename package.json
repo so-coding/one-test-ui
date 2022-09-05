@@ -1,8 +1,8 @@
 {
   "name": "one-ui-element",
-  "version": "0.1.0",
+  "version": "0.1.7",
   "private": false,
-  "main": "dist/one-elementui.umd.min.js",
+  "main": "dist/one-ui-element.umd.min.js",
   "author": {
     "name": "sudi"
   },
@@ -10,7 +10,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib":"vue-cli-service build --target lib packages/index.js"
+    "lib": "vue-cli-service build --target lib packages/index.js"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -23,6 +23,7 @@
     "@vue/cli-plugin-eslint": "^5.0.0",
     "@vue/cli-service": "^5.0.0",
     "@vue/eslint-config-standard": "^6.1.0",
+    "babel-plugin-component": "^1.1.1",
     "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-node": "^11.1.0",

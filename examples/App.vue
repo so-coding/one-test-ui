@@ -1,6 +1,5 @@
 <template>
 	<div id="app">
-		哈哈哈<br />
 		<vt-button type="primary">primary</vt-button>
 	</div>
 </template>
