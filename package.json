@@ -1,8 +1,8 @@
 {
   "name": "one-ui-element",
-  "version": "0.1.7",
+  "version": "0.2.3",
   "private": false,
-  "main": "dist/one-ui-element.umd.min.js",
+  "main": "lib/index/index.js",
   "author": {
     "name": "sudi"
   },

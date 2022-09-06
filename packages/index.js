@@ -1,16 +1,18 @@
 // 整个包的入口
 // 统一导出
 // 导出颜色选择器组件
-import Button from './components/button/index.js'
-import Dialog from './components/dialog/index.js'
-import Input from './components/input'
-import Checkbox from './components/checkbox'
-import Radio from './components/radio'
-import RadioGroup from './components/radio-group'
-import Switch from './components/switch'
-import CheckboxGroup from './components/checkbox-group'
-import Form from './components/form'
-import FormItem from './components/form-item'
+import Button from './button/index.js'
+import Dialog from './dialog/index.js'
+import Input from './input'
+import Checkbox from './checkbox'
+import Radio from './radio'
+import RadioGroup from './radio-group'
+import Switch from './switch'
+import CheckboxGroup from './checkbox-group'
+import Form from './form'
+import FormItem from './form-item'
+
+import './fonts/iconfont.css'
 const components = [
   Button,
   Dialog,
@@ -40,7 +42,16 @@ if (typeof window !== 'undefined' && window.Vue) {
 // 导出install方法
 export default {
   install,
-  ...components // 将插件暴露出去，这样可以按需引入
+  Button,
+  Dialog,
+  Input,
+  Checkbox,
+  Radio,
+  RadioGroup,
+  Switch,
+  CheckboxGroup,
+  Form,
+  FormItem // 将插件暴露出去，这样可以按需引入
 }
 
 // 如果只需要部分组件，请使用import {button} from '';
