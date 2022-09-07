@@ -10,3 +10,4 @@ babel.config.js
 .idea
 .vscode
 *.html
+*.log
