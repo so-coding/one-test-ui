@@ -1,6 +1,6 @@
 {
   "name": "one-ui-element",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "private": false,
   "main": "lib/index/index.js",
   "author": {
@@ -8,7 +8,8 @@
   },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build:pro": "vue-cli-service build",
+    "build:dev": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "lib": "vue-cli-service build --target lib packages/index.js"
   },
@@ -29,8 +30,10 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-vue": "^8.0.3",
+    "file-loader": "^6.2.0",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
+    "url-loader": "^4.1.1",
     "vue-template-compiler": "^2.6.14"
   },
   "eslintConfig": {

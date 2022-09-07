@@ -6,10 +6,11 @@ const buildConfig = {
   //  webpack配置
   configureWebpack: {
     //  入口文件
+    // '.js'  {}
     entry: getComponentEntries('packages'),
     //  输出配置
     output: {
-      //  文件名称
+      //  文件名称 name 和entry 对象的key值
       filename: '[name]/index.js',
       //  构建依赖类型
       libraryTarget: 'umd',
@@ -25,6 +26,20 @@ const buildConfig = {
         commonjs2: 'vue',
         amd: 'vue'
       }
+    },
+    module: {
+      rules: [
+        {
+          // 转换文件格式
+          test: /\.(woff|woff2|eot|ttf|otf)$/,
+          use: {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'fonts/iconfonts'
+            }
+          }
+        }
+      ]
     }
   },
   //  样式输出

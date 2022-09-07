@@ -1,8 +1,8 @@
 @font-face {
 	font-family: 'iconfont'; /* Project id 3548180 */
-	src: url('iconfont.woff2') format('woff2'),
-		url('iconfont.woff?t=1658826581372') format('woff'),
-		url('iconfont.ttf') format('truetype');
+	src: url(./font/iconfont.woff2) format('woff2'),
+		url(./font/iconfont.woff) format('woff'),
+		url(./font/iconfont.ttf) format('truetype');
 }
 
 /* 匹配类名中有vt-icon的元素 */

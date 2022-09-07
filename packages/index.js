@@ -41,17 +41,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 // 导出install方法
 export default {
-  install,
-  Button,
-  Dialog,
-  Input,
-  Checkbox,
-  Radio,
-  RadioGroup,
-  Switch,
-  CheckboxGroup,
-  Form,
-  FormItem // 将插件暴露出去，这样可以按需引入
+  install
 }
 
 // 如果只需要部分组件，请使用import {button} from '';
