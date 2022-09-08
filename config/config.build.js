@@ -1,6 +1,6 @@
 const { resolve, getComponentEntries } = require('./utils')
-
 const buildConfig = {
+  lintOnSave: false,
   //  输出文件目录
   outputDir: resolve('lib'),
   //  webpack配置
@@ -10,6 +10,7 @@ const buildConfig = {
     entry: getComponentEntries('packages'),
     //  输出配置
     output: {
+      // 资源路径使用相对路径
       //  文件名称 name 和entry 对象的key值
       filename: '[name]/index.js',
       //  构建依赖类型
@@ -29,15 +30,20 @@ const buildConfig = {
     },
     module: {
       rules: [
+        // 参考文档： https://webpack.docschina.org/configuration/module#modulerules
         {
-          // 转换文件格式
-          test: /\.(woff|woff2|eot|ttf|otf)$/,
-          use: {
-            loader: 'file-loader',
-            options: {
-              outputPath: 'fonts/iconfonts'
-            }
+          test: /\.(woff|woff2|eot|ttf|otf)$/i,
+          // 文件打包方式
+          type: 'asset/resource',
+          generator: {
+            filename: 'resource/[hash:10][ext][query]',
+            publicPath: './'
           }
+        },
+        {
+          test: /\.css$/,
+          resourceQuery: /inline/,
+          use: 'url-loader'
         }
       ]
     }
@@ -49,7 +55,7 @@ const buildConfig = {
       filename: '[name]/style.css'
     }
   },
-  chainWebpack: config => {
+  chainWebpack: (config) => {
     config.optimization.delete('splitChunks')
     config.plugins.delete('copy')
     config.plugins.delete('preload')

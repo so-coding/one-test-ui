@@ -4,6 +4,7 @@ function resolve(dir) {
 }
 // 开发环境配置
 const devConfig = {
+  lintOnSave: false,
   // ...
   pages: {
     index: {

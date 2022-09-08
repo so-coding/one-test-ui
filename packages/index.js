@@ -12,7 +12,7 @@ import CheckboxGroup from './checkbox-group'
 import Form from './form'
 import FormItem from './form-item'
 
-import './fonts/iconfont.css'
+import './style.css'
 const components = [
   Button,
   Dialog,

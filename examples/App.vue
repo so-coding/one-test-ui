@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<vt-button type="primary">primary</vt-button>
+		<vt-button type="primary" icon="delete">primary</vt-button>
 	</div>
 </template>
 
