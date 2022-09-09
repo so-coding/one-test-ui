@@ -1,15 +1,14 @@
 {
   "name": "one-ui-element",
-  "version": "0.2.5",
+  "version": "0.3.1",
   "private": false,
-  "main": "lib/index/index.js",
+  "main": "lib/index.js",
   "author": {
     "name": "sudi"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build:pro": "vue-cli-service build",
-    "build:dev": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "lib": "vue-cli-service build --target lib packages/index.js"
   },

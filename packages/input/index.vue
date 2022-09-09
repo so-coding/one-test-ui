@@ -1,5 +1,10 @@
 <template>
-  <div class="vt-input" :class="{ 'vt-input_suffix': showSuffix }">
+  <div
+    class="vt-input"
+    @mouseenter="hovering = true"
+    @mouseleave="hovering = false"
+    :class="{ 'vt-input_suffix': showSuffix }"
+  >
     <input
       class="vt-input_inner"
       :class="{ 'is-disabled': disabled }"
@@ -8,22 +13,23 @@
       :name="name"
       :value="value"
       @input="handleInput"
+      @focus="handleFocus"
+      @blur="handleBlur"
       :disabled="disabled"
-      @mouseenter="hovering = true"
-      @mouseleave="hovering = false"
     />
     <span class="vt-input_suffix">
-      <!-- v-if="clearable && value"  -->
+      <!-- v-if="clearable && value"   -->
       <i
         class="on-input_icon vt-icon-cancel"
-        v-if="clearable && value && hovering"
+        v-if="showClear"
+        @mousedown.prevent
         @click="clear"
       ></i>
       <!-- v-if="showPassword && type == 'password'" -->
       <!-- 只有展示密码且input的类型为文本框 -->
       <i
         class="on-input_icon vt-icon-child"
-        v-if="showPassword && type == 'password'"
+        v-if="showPwdVisible"
         @click="handlePassword"
       ></i>
     </span>
@@ -65,31 +71,48 @@ export default {
   },
   watch: {},
   computed: {
-    showSuffix () {
+    showSuffix() {
       return this.clearable || this.showPassword
+    },
+    showPwdVisible() {
+      return (
+        this.showPassword && !this.disabled && (!!this.value || this.focused)
+      )
+    },
+    showClear() {
+      return this.clearable && !this.disabled && !!this.value && this.hovering
     }
   },
-  data () {
+  data() {
     return {
       // 显示是否显示密码框
       passwordVisible: false,
       // 鼠标的移入移除判断
-      hovering: false
+      hovering: false,
+      focused: false
     }
   },
   methods: {
     // 绑定input事件进行回调
-    handleInput (e) {
+    handleInput(e) {
       this.$emit('input', e.target.value)
     },
-    clear () {
+    clear() {
       // input 绑定着父组件的 v-model的值
       this.$emit('input', '')
     },
-    handlePassword () {
+    handlePassword() {
       this.passwordVisible = !this.passwordVisible
     },
-    focus () {}
+    focus() {},
+    handleFocus(event) {
+      this.focused = true
+      this.$emit('focus', event)
+    },
+    handleBlur(event) {
+      this.focused = false
+      this.$emit('blur', event)
+    }
   }
 }
 </script>
@@ -114,6 +137,7 @@ export default {
     line-height: 40px;
     outline: none;
     padding: 0 15px;
+    border-radius: 4px;
     // cubic-bezier() 函数定义了一个贝塞尔曲线(Cubic Bezier)。
     transition: border-color 0.2s cubic-bezier(0.645, 0.45, 0.355, 1);
     width: 100%;
@@ -146,8 +170,8 @@ export default {
     transition: all 0.3s;
     z-index: 900;
     i {
-      color: #c0c4cc;
-      font-size: 14px;
+      font-size: 21px;
+      padding: 7px;
       cursor: pointer;
       transition: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
     }

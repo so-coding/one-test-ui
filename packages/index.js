@@ -11,8 +11,7 @@ import Switch from './switch'
 import CheckboxGroup from './checkbox-group'
 import Form from './form'
 import FormItem from './form-item'
-
-import './style.css'
+import './fonts/iconfont.css'
 const components = [
   Button,
   Dialog,

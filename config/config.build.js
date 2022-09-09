@@ -37,7 +37,7 @@ const buildConfig = {
           type: 'asset/resource',
           generator: {
             filename: 'resource/[hash:10][ext][query]',
-            publicPath: './'
+            publicPath: '../../'
           }
         },
         {
