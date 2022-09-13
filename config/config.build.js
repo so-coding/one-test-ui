@@ -6,7 +6,8 @@ const buildConfig = {
   //  webpack配置
   configureWebpack: {
     //  入口文件
-    // '.js'  {}
+    // '.js'  {
+
     entry: getComponentEntries('packages'),
     //  输出配置
     output: {
