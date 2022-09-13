@@ -58,7 +58,7 @@ plugins: [
  npm run build:pro
 ```
 
-打包完成后，打开lib目录下的style.css文件，需要更改url()里面的路径格式
+打包完成后，打开lib目录下的style.css文件，需要更改url()里面的路径格式，然后再执行npm publish
 
 更改前：
 
